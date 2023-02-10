@@ -26,3 +26,23 @@ jobs:
       - run:
           name: Upload file to S3
           command: aws s3 sync ./dist/ s3://circleci-s3-integration-bucket --delete
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build_project:
+          filters:
+              branches:
+                ignore: /.*/
+              tags:
+                only: /.*/
+
+      - deploy_project:
+          requires:
+            - build_project
+          context: aws-context
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*/
