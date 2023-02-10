@@ -33,6 +33,6 @@ workflows:
     jobs:
       - build_project
       - deploy_project:
-        requires:
-          - build_project
-        context: aws-context
+          requires:
+            - build_project
+          context: aws-context
