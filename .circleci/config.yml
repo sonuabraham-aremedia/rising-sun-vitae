@@ -13,12 +13,37 @@ jobs:
           command: npm install --save
       - run: 
           name: Building project
-          command: npm run build
+          command: echo "Hello world"
       - persist_to_workspace:
           root: .
           paths:
             - .
+  deploy_project:
+    executor: aws-cli/default
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-cli/setup:
+          profile-name: default
+      - run:
+          name: Upload file to S3
+          command: aws s3 sync ./dist/ s3://circleci-s3-integration-bucket --delete        
 workflows:
   build_test:
     jobs:
       - build_project
+        filters:
+          branches:
+            ignore: /.*/
+            tags:
+              only: /.*/
+
+      - deploy_project:
+          requires:
+            - build_project
+          context: aws-context
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*/
