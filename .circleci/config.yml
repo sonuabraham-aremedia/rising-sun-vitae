@@ -5,12 +5,12 @@ jobs:
   build_project:
     working_directory: ~/circle-ci-s3-deploy
     docker:
-      - image: node:16.16.0
+      - image: cimg/node:16.16.0
     steps:
       - checkout
       - run: 
           name: Installing dependencies
-          command: npm install --save
+          command: npm install 
       - run: 
           name: Building project
           command: npm run build
