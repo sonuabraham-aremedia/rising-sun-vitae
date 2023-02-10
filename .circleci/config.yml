@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: 
           name: Installing dependencies
-          command: "npm install -g npm"
+          command: npm install
       - run: 
           name: Building project
           command: npm run build
