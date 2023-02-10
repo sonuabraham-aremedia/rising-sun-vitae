@@ -27,7 +27,7 @@ jobs:
           profile-name: am-cloud-admin-ops
       - run:
           name: Upload file to S3
-          command: aws s3 sync ./sync s3://circleci-s3-integration-bucket --delete        
+          command: aws s3 sync ./dist s3://circleci-s3-integration-bucket --delete        
 workflows:
   build_test:
     jobs:
