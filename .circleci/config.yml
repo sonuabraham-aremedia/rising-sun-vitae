@@ -13,7 +13,7 @@ jobs:
           command: npm install --save
       - run: 
           name: Building project
-          command: echo "Hello world"
+          command: npm run build
       - persist_to_workspace:
           root: .
           paths:
