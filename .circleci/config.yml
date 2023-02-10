@@ -24,7 +24,7 @@ jobs:
       - attach_workspace:
           at: .
       - aws-cli/setup:
-          profile-name: default
+          profile-name: am-cloud-admin-ops
       - run:
           name: Upload file to S3
           command: aws s3 sync ./dist/ s3://circleci-s3-integration-bucket --delete        
@@ -33,3 +33,6 @@ workflows:
     jobs:
       - build_project
       - deploy_project
+        requires:
+          - build_project
+        context: aws-context
