@@ -1,7 +1,7 @@
 import { SailthruRequestType, RisingSunThemeType } from "./RisingSunForm.types";
 import { SAILTHRU_LIST_NAME } from "./RisingSunForm.constants";
 
-export interface RisingSunFormProps {
+export interface RisingSunFormURLParams {
   ctaText: string;
   successfulCtaText: string;
   primaryText: string;

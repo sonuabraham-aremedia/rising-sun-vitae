@@ -1,9 +1,10 @@
+import { useParams } from "react-router-dom";
 import React, { useState, useEffect, SyntheticEvent } from "react";
-import "./RisingSunForm.css";
+import "../styles/_risingSunForm.css";
 import {
   ISailthruClient,
   IWindowWithSailthru,
-  RisingSunFormProps,
+  RisingSunFormURLParams,
 } from "./RisingSunForm.interfaces";
 
 import {
@@ -19,16 +20,18 @@ import {
   TRUE,
 } from "./RisingSunForm.constants";
 
-const RisingSun = ({
-  ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
-  successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
-  primaryText = DEFAULT_RISING_SUN_PRIMARY_TEXT,
-  secondaryText = DEFAULT_RISING_SUN_SECONDARY_TEXT,
-  primarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
-  secondarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
-  termsAndConditions = DEFAULT_RISING_SUN_TERMS,
-  theme = "bounty",
-}: RisingSunFormProps) => {
+const RisingSun = () => {
+  const {
+    ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
+    successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
+    primaryText = DEFAULT_RISING_SUN_PRIMARY_TEXT,
+    secondaryText = DEFAULT_RISING_SUN_SECONDARY_TEXT,
+    primarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
+    secondarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
+    termsAndConditions = DEFAULT_RISING_SUN_TERMS,
+    theme = "bounty",
+  }: RisingSunFormURLParams = useParams();
+
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [sailthruClient, setSailthruClient] =
@@ -70,6 +73,11 @@ const RisingSun = ({
     setIsOpen(!isOpen);
     localStorage.setItem("hasSeenPopup", TRUE);
     const header = document.querySelector(".header") as HTMLElement;
+    const advert = document.querySelector(".ad") as HTMLElement;
+
+    if (advert) {
+      advert.style.zIndex = "unset";
+    }
 
     if (header) {
       header.style.zIndex = "unset";
@@ -99,9 +107,14 @@ const RisingSun = ({
     }, 3000);
 
     const header = document.querySelector(".header") as HTMLElement;
+    const advert = document.querySelector(".ad") as HTMLElement;
 
     if (header) {
       header.style.zIndex = "0";
+    }
+
+    if (advert) {
+      advert.style.zIndex = "0";
     }
   }, []);
 
