@@ -32,42 +32,70 @@ const RisingSun = () => {
 
   // const queryParams = new URLSearchParams(window.location.search);
 
-  const scriptElement = document.querySelector(
-    'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-3c4ae23f.js"]'
-  );
+  // const scriptElement = document.querySelector(
+  //   'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-3c4ae23f.js"]'
+  // );
 
   const scriptElementByClass = document.querySelector("#js-rising-sun-script");
+  // comment this out and HARD CODE IT IN FOR NOW FOR LOCAL USE ONLY
+  // const src = scriptElement?.getAttribute("src");
 
-  const src = scriptElement?.getAttribute("src");
-  const srcByClass = scriptElementByClass?.getAttribute("src");
-  const queryParams = new URLSearchParams(src?.split("?")[1]);
-  const bareBonesWithByClass = new URLSearchParams(src?.split("?")[1]);
-  const bareBoness = src?.split("?");
+  // This is for local use only hard code
+  // const src =
+  //   "https://dokyjxpxv2g53.cloudfront.net/assets/index-b6350917.js?theme=who";
 
-  console.log({ bareBonesWithByClass });
-  console.log({ srcByClass });
-  console.log({ src });
-  console.log({ bareBoness });
-  console.log({ scriptElementByClass });
-  console.log({ scriptElement });
-  console.log({ queryParams });
+  const srcByClass = scriptElementByClass?.getAttribute("src") as string;
+  // const queryParams = new URLSearchParams(src.split("?")[1]);
+  // const bareBonesWithByClass = new URLSearchParams(src?.split("?")[1]);
+  // const bareBoness = src.split("?");
 
-  const ctaText = queryParams.get("ctaText") ?? DEFAULT_RISING_SUN_CTA_TEXT;
+  function saveQueryParams(url: string): Record<string, string> {
+    const queryParams: Record<string, string> = {};
+    const queryString = url.split("?")[1];
+
+    if (queryString) {
+      const pairs = queryString.split("&");
+      for (let i = 0; i < pairs.length; i++) {
+        const pair = pairs[i].split("=");
+        queryParams[decodeURIComponent(pair[0])] = decodeURIComponent(
+          pair[1] || ""
+        );
+      }
+    }
+
+    return queryParams;
+  }
+
+  // Example usage
+  const savedQueryParams = saveQueryParams(srcByClass);
+
+  console.log(savedQueryParams, "RESULT"); // Output: { "theme": "who" }
+  console.log("AND THE THEME IS ", savedQueryParams["theme"]);
+
+  // console.log({ bareBonesWithByClass });
+  // console.log({ srcByClass });
+  // console.log({ src });
+  // console.log({ bareBoness });
+  // console.log({ scriptElementByClass });
+  // console.log({ scriptElement });
+  // console.log({ queryParams });
+
+  const ctaText = savedQueryParams["ctaText"] ?? DEFAULT_RISING_SUN_CTA_TEXT;
   const successfulCtaText =
-    queryParams.get("successfulCtaText") ?? DEFAULT_SUCCESSFUL_CTA_TEXT;
+    savedQueryParams["successfulCtaText"] ?? DEFAULT_SUCCESSFUL_CTA_TEXT;
   const primaryText =
-    queryParams.get("primaryText") ?? DEFAULT_RISING_SUN_PRIMARY_TEXT;
+    savedQueryParams["primaryText"] ?? DEFAULT_RISING_SUN_PRIMARY_TEXT;
   const secondaryText =
-    queryParams.get("secondaryText") ?? DEFAULT_RISING_SUN_SECONDARY_TEXT;
+    savedQueryParams["secondaryText"] ?? DEFAULT_RISING_SUN_SECONDARY_TEXT;
   const primarySuccessMessage =
-    queryParams.get("primarySuccessMessage") ??
+    savedQueryParams["primarySuccessMessage"] ??
     DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE;
   const secondarySuccessMessage =
-    queryParams.get("secondarySuccessMessage") ??
+    savedQueryParams["secondarySuccessMessage"] ??
     DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE;
   const termsAndConditions =
-    queryParams.get("termsAndConditions") ?? DEFAULT_RISING_SUN_TERMS;
-  const theme = queryParams.get("theme") ?? "bounty";
+    savedQueryParams["termsAndConditions"] ?? DEFAULT_RISING_SUN_TERMS;
+  const theme = savedQueryParams["theme"] ?? "bounty";
 
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
