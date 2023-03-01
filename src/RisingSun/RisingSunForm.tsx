@@ -33,7 +33,7 @@ const RisingSun = () => {
   // const queryParams = new URLSearchParams(window.location.search);
 
   const scriptElement = document.querySelector(
-    'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-8ae09823.js"]'
+    'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-3c4ae23f.js"]'
   );
 
   const scriptElementByClass = document.querySelector(".js-rising-sun-script");
