@@ -1,10 +1,8 @@
-import { useParams } from "react-router-dom";
 import React, { useState, useEffect, SyntheticEvent } from "react";
 import "../styles/_risingSunForm.css";
 import {
   ISailthruClient,
   IWindowWithSailthru,
-  RisingSunFormURLParams,
 } from "./RisingSunForm.interfaces";
 
 import {
@@ -21,16 +19,35 @@ import {
 } from "./RisingSunForm.constants";
 
 const RisingSun = () => {
-  const {
-    ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
-    successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
-    primaryText = DEFAULT_RISING_SUN_PRIMARY_TEXT,
-    secondaryText = DEFAULT_RISING_SUN_SECONDARY_TEXT,
-    primarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
-    secondarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
-    termsAndConditions = DEFAULT_RISING_SUN_TERMS,
-    theme = "bounty",
-  }: RisingSunFormURLParams = useParams();
+  // const {
+  //   ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
+  //   successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
+  //   primaryText = DEFAULT_RISING_SUN_PRIMARY_TEXT,
+  //   secondaryText = DEFAULT_RISING_SUN_SECONDARY_TEXT,
+  //   primarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
+  //   secondarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
+  //   termsAndConditions = DEFAULT_RISING_SUN_TERMS,
+  //   theme = "bounty",
+  // }: RisingSunFormURLParams = useParams();
+
+  const queryParams = new URLSearchParams(window.location.search);
+
+  const ctaText = queryParams.get("ctaText") ?? DEFAULT_RISING_SUN_CTA_TEXT;
+  const successfulCtaText =
+    queryParams.get("successfulCtaText") ?? DEFAULT_SUCCESSFUL_CTA_TEXT;
+  const primaryText =
+    queryParams.get("primaryText") ?? DEFAULT_RISING_SUN_PRIMARY_TEXT;
+  const secondaryText =
+    queryParams.get("secondaryText") ?? DEFAULT_RISING_SUN_SECONDARY_TEXT;
+  const primarySuccessMessage =
+    queryParams.get("primarySuccessMessage") ??
+    DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE;
+  const secondarySuccessMessage =
+    queryParams.get("secondarySuccessMessage") ??
+    DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE;
+  const termsAndConditions =
+    queryParams.get("termsAndConditions") ?? DEFAULT_RISING_SUN_TERMS;
+  const theme = queryParams.get("theme") ?? "bounty";
 
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
