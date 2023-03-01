@@ -30,7 +30,15 @@ const RisingSun = () => {
   //   theme = "bounty",
   // }: RisingSunFormURLParams = useParams();
 
-  const queryParams = new URLSearchParams(window.location.search);
+  // const queryParams = new URLSearchParams(window.location.search);
+
+  const scriptElement = document.querySelector(
+    'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-8ae09823.js"]'
+  );
+  const src = scriptElement?.getAttribute("src");
+  const queryParams = new URLSearchParams(src?.split("?")[1]);
+
+  console.log({ queryParams });
 
   const ctaText = queryParams.get("ctaText") ?? DEFAULT_RISING_SUN_CTA_TEXT;
   const successfulCtaText =
@@ -48,6 +56,9 @@ const RisingSun = () => {
   const termsAndConditions =
     queryParams.get("termsAndConditions") ?? DEFAULT_RISING_SUN_TERMS;
   const theme = queryParams.get("theme") ?? "bounty";
+
+  console.log({ theme });
+  console.log({ secondarySuccessMessage });
 
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
