@@ -35,9 +35,21 @@ const RisingSun = () => {
   const scriptElement = document.querySelector(
     'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-8ae09823.js"]'
   );
-  const src = scriptElement?.getAttribute("src");
-  const queryParams = new URLSearchParams(src?.split("?")[1]);
 
+  const scriptElementByClass = document.querySelector(".js-rising-sun-script");
+
+  const src = scriptElement?.getAttribute("src");
+  const srcByClass = scriptElementByClass?.getAttribute("src");
+  const queryParams = new URLSearchParams(src?.split("?")[1]);
+  const bareBonesWithByClass = new URLSearchParams(src?.split("?")[1]);
+  const bareBoness = src?.split("?");
+
+  console.log({ bareBonesWithByClass });
+  console.log({ srcByClass });
+  console.log({ src });
+  console.log({ bareBoness });
+  console.log({ scriptElementByClass });
+  console.log({ scriptElement });
   console.log({ queryParams });
 
   const ctaText = queryParams.get("ctaText") ?? DEFAULT_RISING_SUN_CTA_TEXT;
@@ -56,9 +68,6 @@ const RisingSun = () => {
   const termsAndConditions =
     queryParams.get("termsAndConditions") ?? DEFAULT_RISING_SUN_TERMS;
   const theme = queryParams.get("theme") ?? "bounty";
-
-  console.log({ theme });
-  console.log({ secondarySuccessMessage });
 
   const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
