@@ -36,7 +36,7 @@ const RisingSun = () => {
     'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-3c4ae23f.js"]'
   );
 
-  const scriptElementByClass = document.querySelector(".js-rising-sun-script");
+  const scriptElementByClass = document.querySelector("#js-rising-sun-script");
 
   const src = scriptElement?.getAttribute("src");
   const srcByClass = scriptElementByClass?.getAttribute("src");
