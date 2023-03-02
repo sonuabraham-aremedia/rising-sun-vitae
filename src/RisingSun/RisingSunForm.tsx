@@ -1,5 +1,5 @@
 import React, { useState, useEffect, SyntheticEvent } from "react";
-import "../styles/_risingSunForm.css";
+import "./risingSunForm.css";
 import {
   ISailthruClient,
   IWindowWithSailthru,
@@ -19,6 +19,11 @@ import {
 } from "./RisingSunForm.constants";
 
 const RisingSun = () => {
+  // interface IExtractParams {
+  //   queryString: string;
+  // }
+  // const extractParams = ({ queryString }: IExtractParams) => Object.fromEntries(new URLSearchParams(queryString.split('?')[1]));
+  // const { param1, param2, param3 } = extractParams({ queryString });
   // const {
   //   ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
   //   successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
