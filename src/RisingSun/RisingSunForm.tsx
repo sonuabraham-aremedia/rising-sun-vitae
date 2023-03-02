@@ -1,5 +1,5 @@
 import React, { useState, useEffect, SyntheticEvent } from "react";
-import "./risingSunForm.css";
+import "./RisingSunForm.css";
 import {
   ISailthruClient,
   IWindowWithSailthru,
