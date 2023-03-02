@@ -19,40 +19,9 @@ import {
 } from "./RisingSunForm.constants";
 
 const RisingSun = () => {
-  // interface IExtractParams {
-  //   queryString: string;
-  // }
-  // const extractParams = ({ queryString }: IExtractParams) => Object.fromEntries(new URLSearchParams(queryString.split('?')[1]));
-  // const { param1, param2, param3 } = extractParams({ queryString });
-  // const {
-  //   ctaText = DEFAULT_RISING_SUN_CTA_TEXT,
-  //   successfulCtaText = DEFAULT_SUCCESSFUL_CTA_TEXT,
-  //   primaryText = DEFAULT_RISING_SUN_PRIMARY_TEXT,
-  //   secondaryText = DEFAULT_RISING_SUN_SECONDARY_TEXT,
-  //   primarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
-  //   secondarySuccessMessage = DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
-  //   termsAndConditions = DEFAULT_RISING_SUN_TERMS,
-  //   theme = "bounty",
-  // }: RisingSunFormURLParams = useParams();
-
-  // const queryParams = new URLSearchParams(window.location.search);
-
-  // const scriptElement = document.querySelector(
-  //   'script[src="https://dokyjxpxv2g53.cloudfront.net/assets/index-3c4ae23f.js"]'
-  // );
-
   const scriptElementByClass = document.querySelector("#js-rising-sun-script");
-  // comment this out and HARD CODE IT IN FOR NOW FOR LOCAL USE ONLY
-  // const src = scriptElement?.getAttribute("src");
-
-  // This is for local use only hard code
-  // const src =
-  //   "https://dokyjxpxv2g53.cloudfront.net/assets/index-b6350917.js?theme=who";
 
   const srcByClass = scriptElementByClass?.getAttribute("src") as string;
-  // const queryParams = new URLSearchParams(src.split("?")[1]);
-  // const bareBonesWithByClass = new URLSearchParams(src?.split("?")[1]);
-  // const bareBoness = src.split("?");
 
   function saveQueryParams(url: string): Record<string, string> {
     const queryParams: Record<string, string> = {};
@@ -71,19 +40,7 @@ const RisingSun = () => {
     return queryParams;
   }
 
-  // Example usage
   const savedQueryParams = saveQueryParams(srcByClass);
-
-  console.log(savedQueryParams, "RESULT"); // Output: { "theme": "who" }
-  console.log("AND THE THEME IS ", savedQueryParams["theme"]);
-
-  // console.log({ bareBonesWithByClass });
-  // console.log({ srcByClass });
-  // console.log({ src });
-  // console.log({ bareBoness });
-  // console.log({ scriptElementByClass });
-  // console.log({ scriptElement });
-  // console.log({ queryParams });
 
   const ctaText = savedQueryParams["ctaText"] ?? DEFAULT_RISING_SUN_CTA_TEXT;
   const successfulCtaText =
