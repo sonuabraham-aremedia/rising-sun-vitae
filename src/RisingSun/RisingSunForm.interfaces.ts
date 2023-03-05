@@ -1,5 +1,4 @@
 import { SailthruRequestType, RisingSunThemeType } from "./RisingSunForm.types";
-import { SAILTHRU_LIST_NAME } from "./RisingSunForm.constants";
 
 export interface RisingSunFormURLParams {
   ctaText: string;
@@ -12,10 +11,17 @@ export interface RisingSunFormURLParams {
   theme: RisingSunThemeType;
 }
 
+export interface IRisingSunExtractParamsResponse {
+  theme: RisingSunThemeType;
+}
+
+export interface IExtractParams {
+  queryString: string;
+}
 export interface ISailthruParams {
   email?: string;
-  lists?: {
-    [SAILTHRU_LIST_NAME]: boolean;
+  lists: {
+    [SAILTHRU_LIST_NAME: string]: boolean;
   };
   onError: (error: Error) => void;
   onSuccess: (response: Response) => void;

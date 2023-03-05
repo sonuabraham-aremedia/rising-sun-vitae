@@ -1,4 +1,9 @@
-import React, { useState, useEffect, SyntheticEvent } from "react";
+import React, {
+  useState,
+  useEffect,
+  SyntheticEvent,
+  InputHTMLAttributes,
+} from "react";
 import "./RisingSunForm.css";
 import {
   ISailthruClient,
@@ -6,66 +11,43 @@ import {
 } from "./RisingSunForm.interfaces";
 
 import {
-  DEFAULT_RISING_SUN_CTA_TEXT,
-  DEFAULT_RISING_SUN_PRIMARY_TEXT,
-  DEFAULT_RISING_SUN_SECONDARY_TEXT,
-  DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE,
-  DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE,
-  DEFAULT_RISING_SUN_TERMS,
-  DEFAULT_SUCCESSFUL_CTA_TEXT,
-  SAILTHRU_CUSTOMER_ID,
-  SAILTHRU_LIST_NAME,
+  SAILTHRU_CUSTOMER_ID_MAP,
+  SAILTHRU_LIST_NAME_MAP,
   TRUE,
 } from "./RisingSunForm.constants";
+import { extractParams, getRisingSunTheme } from "./RisingSunForm.helpers";
+import { RisingSunThemeType } from "./RisingSunForm.types";
 
 const RisingSun = () => {
   const scriptElementByClass = document.querySelector("#js-rising-sun-script");
+  const queryString = scriptElementByClass?.getAttribute("src") as string;
+  const { theme: themeParam } = extractParams({ queryString });
+  const {
+    ctaText,
+    primarySuccessMessage,
+    primaryText,
+    secondarySuccessMessage,
+    secondaryText,
+    successfulCtaText,
+    termsAndConditions,
+    theme,
+  } = getRisingSunTheme(String(themeParam) as RisingSunThemeType);
 
-  const srcByClass = scriptElementByClass?.getAttribute("src") as string;
-
-  function saveQueryParams(url: string): Record<string, string> {
-    const queryParams: Record<string, string> = {};
-    const queryString = url.split("?")[1];
-
-    if (queryString) {
-      const pairs = queryString.split("&");
-      for (let i = 0; i < pairs.length; i++) {
-        const pair = pairs[i].split("=");
-        queryParams[decodeURIComponent(pair[0])] = decodeURIComponent(
-          pair[1] || ""
-        );
-      }
-    }
-
-    return queryParams;
-  }
-
-  const savedQueryParams = saveQueryParams(srcByClass);
-
-  const ctaText = savedQueryParams["ctaText"] ?? DEFAULT_RISING_SUN_CTA_TEXT;
-  const successfulCtaText =
-    savedQueryParams["successfulCtaText"] ?? DEFAULT_SUCCESSFUL_CTA_TEXT;
-  const primaryText =
-    savedQueryParams["primaryText"] ?? DEFAULT_RISING_SUN_PRIMARY_TEXT;
-  const secondaryText =
-    savedQueryParams["secondaryText"] ?? DEFAULT_RISING_SUN_SECONDARY_TEXT;
-  const primarySuccessMessage =
-    savedQueryParams["primarySuccessMessage"] ??
-    DEFAULT_RISING_SUN_SIGN_UP_PRIMARY_SUCCESS_MESSAGE;
-  const secondarySuccessMessage =
-    savedQueryParams["secondarySuccessMessage"] ??
-    DEFAULT_RISING_SUN_SIGN_UP_SECONDARY_SUCCESS_MESSAGE;
-  const termsAndConditions =
-    savedQueryParams["termsAndConditions"] ?? DEFAULT_RISING_SUN_TERMS;
-  const theme = savedQueryParams["theme"] ?? "bounty";
-
-  const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
+  const [email, setEmailValue] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [hasSeenPopup, setHasSeenPopup] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isSignUpSuccessful, setIsSignUpSuccessful] = useState<boolean>(false);
   const [sailthruClient, setSailthruClient] =
     useState<ISailthruClient["Sailthru"]>();
-  const [error, setError] = useState<string>("");
-  const [hasSeenPopup, setHasSeenPopup] = useState(false);
-  const [email, setEmailValue] = useState("");
+
+  const handleUpdateEmailValue = (
+    event: InputHTMLAttributes<HTMLInputElement["formTarget"]>
+  ) => {
+    const { value } = event.target;
+
+    setEmailValue(value);
+  };
 
   const handleSubmitRisingSun = (event: SyntheticEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -74,15 +56,16 @@ const RisingSun = () => {
       return;
     }
 
-    sailthruClient.init({ customerId: SAILTHRU_CUSTOMER_ID });
+    sailthruClient.init({
+      customerId: String(SAILTHRU_CUSTOMER_ID_MAP[themeParam]),
+    });
     sailthruClient.integration("userSignUp", {
       email,
       lists: {
-        [SAILTHRU_LIST_NAME]: true,
+        [SAILTHRU_LIST_NAME_MAP[themeParam]]: true,
       },
       onSuccess: () => {
         setIsSignUpSuccessful(true);
-        setError("");
       },
       onError: () => {
         setError("Looks like that is not a valid email please try again");
@@ -90,15 +73,11 @@ const RisingSun = () => {
     });
   };
 
-  const handleUpdateEmailValue = (event: SyntheticEvent) => {
-    const { value } = event.target as HTMLInputElement;
-
-    setEmailValue(value);
-  };
-
   const handleCloseRisingSun = () => {
-    setIsOpen(!isOpen);
     localStorage.setItem("hasSeenPopup", TRUE);
+
+    setIsOpen(!isOpen);
+
     const header = document.querySelector(".header") as HTMLElement;
     const advert = document.querySelector(".ad") as HTMLElement;
 
@@ -112,8 +91,6 @@ const RisingSun = () => {
   };
 
   const handleOnCloseRisingSunSuccess = () => {
-    setIsSignUpSuccessful(false);
-
     handleCloseRisingSun();
   };
 
@@ -161,8 +138,8 @@ const RisingSun = () => {
           type="button"
           onClick={handleCloseRisingSun}
         >
-          <span className="h-hide-visually">{visuallyHiddenCloseIconText}</span>
           <div className={`c-${theme}-close-icon`} />
+          <span className="h-hide-visually">{visuallyHiddenCloseIconText}</span>
         </button>
 
         <div className={`c-${theme}-rising-sun-form__wrapper`}>
@@ -189,7 +166,7 @@ const RisingSun = () => {
               >
                 Email:
               </label>
-              {error ? <div style={{ color: "red" }}>{error}</div> : null}
+              {error ? <div style={{ color: "#e42732" }}>{error}</div> : null}
               <input
                 className={`c-${theme}-rising-sun-form__input`}
                 id="email"

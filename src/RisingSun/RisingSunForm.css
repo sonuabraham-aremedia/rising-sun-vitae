@@ -5,17 +5,17 @@ form {
 /* -------------BOUNTY MAG */
 
 .c-bounty-close-icon {
-  width: 2rem;
   height: 2rem;
+  width: 2rem;
 }
 
 .c-bounty-close-icon:before,
 .c-bounty-close-icon:after {
-  position: absolute;
+  background-color: #ff5000;
   content: " ";
   height: 1.4rem;
+  position: absolute;
   width: 4px;
-  background-color: #ff5000;
 }
 
 .c-bounty-close-icon:before {
@@ -27,32 +27,33 @@ form {
 }
 
 .c-bounty-close-button {
-  position: absolute;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
   background-color: #fff;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
   right: 1rem;
   top: 1rem;
 }
 
 .c-bounty-rising-sun-form {
-  position: fixed;
-  bottom: 0;
   background-color: #fff;
+  bottom: 0;
   left: 10%;
+  position: fixed;
   right: 10%;
   z-index: 99999999;
 }
 
 .c-bounty-rising-sun-form__overlay {
+  -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
   border: none;
+  bottom: 0;
   left: 0;
   opacity: 1;
   position: fixed;
@@ -60,51 +61,50 @@ form {
   top: 0;
   transition: opacity var(--g-transition-time) ease;
   z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-bounty-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  text-align: center;
   justify-content: center;
-  max-width: 50%;
   margin: 0 auto;
+  max-width: 50%;
   padding: 3.125rem;
+  text-align: center;
 }
 
 .c-bounty-rising-sun-form__heading {
-  margin: 0;
-  margin-bottom: 2.563rem;
   color: #ff5000;
   font-size: 1.875rem;
   font-weight: 700;
+  margin-bottom: 2.563rem;
+  margin: 0;
 }
 
 .c-bounty-rising-sun-form__sub-heading {
-  margin: 0;
-  margin-bottom: 1.875rem;
   font-size: 1rem;
+  margin-bottom: 1.875rem;
+  margin: 0;
 }
 
 .c-bounty-rising-sun-form__input {
-  text-align: center;
+  border: 1px solid #f0f1f3;
   font-size: 0.875rem;
   padding: 0.8rem;
-  border: 1px solid #f0f1f3;
+  text-align: center;
 }
 
 .c-bounty-rising-sun-form__submit {
   background-color: #bd79e3;
-  border: none;
   border-radius: 3px;
+  border: none;
   color: #ffff;
-  font-size: 0.875rem;
-  text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
+  font-size: 0.875rem;
   margin-bottom: 1.875rem;
+  padding: 0.8rem;
+  text-transform: uppercase;
 }
 
 .c-bounty-rising-sun-form__copy {
@@ -128,25 +128,12 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-bounty-successful-rising-sun-pop-up {
-  font-family: "Roboto", sans-serif;
-  position: fixed;
-  bottom: 0;
   background-color: #fff;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
   left: 10%;
+  position: fixed;
   right: 10%;
   z-index: 99999999;
 }
@@ -155,17 +142,18 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  text-align: center;
   justify-content: center;
-  max-width: 50%;
   margin: 0 auto;
+  max-width: 50%;
   padding: 3.125rem;
+  text-align: center;
 }
 
 .c-bounty-successful-rising-sun__overlay {
+  -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
   border: none;
+  bottom: 0;
   left: 0;
   opacity: 1;
   position: fixed;
@@ -173,34 +161,33 @@ form {
   top: 0;
   transition: opacity var(--g-transition-time) ease;
   z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-bounty-successful-rising-sun__heading {
-  margin: 0;
-  margin-bottom: 2.563rem;
   color: #ff5000;
   font-size: 1.875rem;
   font-weight: 700;
+  margin-bottom: 2.563rem;
+  margin: 0;
 }
 
 .c-bounty-successful-rising-sun__sub-heading {
-  margin: 0;
-  margin-bottom: 1.875rem;
   font-size: 1rem;
+  margin-bottom: 1.875rem;
+  margin: 0;
 }
 
 button.c-bounty-successful-rising-sun__submit {
   background-color: #bd79e3;
-  border: none;
   border-radius: 3px;
+  border: none;
   color: #ffff;
-  font-size: 0.875rem;
-  text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
+  font-size: 0.875rem;
   margin-bottom: 1.875rem;
+  padding: 0.8rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 /* ---------------------WHO MAG */
@@ -210,17 +197,17 @@ form {
 }
 
 .c-who-close-icon {
-  width: 2rem;
-  height: 2rem;
+  height: 12px;
+  width: 13px;
 }
 
 .c-who-close-icon:before,
 .c-who-close-icon:after {
-  position: absolute;
-  content: " ";
-  height: 1.4rem;
-  width: 4px;
   background-color: #2ae3d8;
+  content: " ";
+  height: 12px;
+  position: absolute;
+  width: 2px;
 }
 
 .c-who-close-icon:before {
@@ -232,32 +219,33 @@ form {
 }
 
 .c-who-close-button {
-  position: absolute;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
 
 .c-who-rising-sun-form {
-  position: fixed;
-  bottom: 0;
   background-color: #fff;
+  bottom: 0;
   left: 10%;
+  position: fixed;
   right: 10%;
   z-index: 99999999;
 }
 
 .c-who-rising-sun-form__overlay {
+  -webkit-overflow-scrolling: touch;
   background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
   border: none;
+  bottom: 0;
   left: 0;
   opacity: 1;
   position: fixed;
@@ -265,55 +253,54 @@ form {
   top: 0;
   transition: opacity var(--g-transition-time) ease;
   z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-who-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  text-align: center;
+  gap: 16px;
   justify-content: center;
-  max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  max-width: 50%;
+  padding: 50px;
+  text-align: center;
 }
 
 .c-who-rising-sun-form__heading {
-  margin: 0;
-  margin-bottom: 2.563rem;
   color: #202020;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
+  margin-bottom: 40px;
+  margin: 0;
 }
 
 .c-who-rising-sun-form__sub-heading {
+  font-size: 16px;
+  margin-bottom: 30px;
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
 }
 
 .c-who-rising-sun-form__input {
-  text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
   border: 1px solid #f0f1f3;
+  font-size: 14px;
+  padding: 12px;
+  text-align: center;
 }
 
 .c-who-rising-sun-form__submit {
   background-color: #2ae3d8;
+  border-radius: 6px;
   border: none;
-  border-radius: 3px;
   color: #ffff;
-  font-size: 0.875rem;
-  text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding: 12px;
+  text-transform: uppercase;
 }
 
 .c-who-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -333,19 +320,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-who-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -359,12 +333,12 @@ form {
 .c-who-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-who-successful-rising-sun__overlay {
@@ -383,32 +357,32 @@ form {
 
 .c-who-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #2ae3d8;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-who-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-who-successful-rising-sun__submit {
   background-color: #2ae3d8;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
-/* -----------Elle Mag */
+/* --------Elle Mag */
 
 form {
   font-family: "Roboto", sans-serif;
@@ -536,19 +510,6 @@ form {
   .c-elle-successful-rising-sun-pop-up__wrapper {
     max-width: 100%;
   }
-}
-
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }
 
 .c-elle-successful-rising-sun-pop-up {
@@ -743,19 +704,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-homestolove-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -825,16 +773,16 @@ form {
 }
 
 .c-homebeautiful-close-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 13px;
+  height: 12px;
 }
 
 .c-homebeautiful-close-icon:before,
 .c-homebeautiful-close-icon:after {
   position: absolute;
   content: " ";
-  height: 1.4rem;
-  width: 4px;
+  height: 12px;
+  width: 2px;
   background-color: #3baeab;
 }
 
@@ -856,8 +804,8 @@ form {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  right: 16px;
+  top: 16px;
 }
 
 .c-homebeautiful-rising-sun-form {
@@ -886,49 +834,49 @@ form {
 .c-homebeautiful-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-homebeautiful-rising-sun-form__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #202020;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-homebeautiful-rising-sun-form__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .c-homebeautiful-rising-sun-form__input {
   text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
+  font-size: 14px;
+  padding: 12px;
   border: 1px solid #f0f1f3;
 }
 
 .c-homebeautiful-rising-sun-form__submit {
   background-color: #3baeab;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
 }
 
 .c-homebeautiful-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -948,19 +896,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-homebeautiful-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -974,12 +909,12 @@ form {
 .c-homebeautiful-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-homebeautiful-successful-rising-sun__overlay {
@@ -998,28 +933,28 @@ form {
 
 .c-homebeautiful-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #3baeab;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-homebeautiful-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-homebeautiful-successful-rising-sun__submit {
   background-color: #3baeab;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -1153,19 +1088,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-beautyheaven-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -1235,16 +1157,16 @@ form {
 }
 
 .c-betterhomesandgardens-close-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 13px;
+  height: 12px;
 }
 
 .c-betterhomesandgardens-close-icon:before,
 .c-betterhomesandgardens-close-icon:after {
   position: absolute;
   content: " ";
-  height: 1.4rem;
-  width: 4px;
+  height: 12px;
+  width: 2px;
   background-color: #5198d1;
 }
 
@@ -1266,8 +1188,8 @@ form {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  right: 16px;
+  top: 16px;
 }
 
 .c-betterhomesandgardens-rising-sun-form {
@@ -1296,49 +1218,49 @@ form {
 .c-betterhomesandgardens-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-betterhomesandgardens-rising-sun-form__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #5198d1;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-betterhomesandgardens-rising-sun-form__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .c-betterhomesandgardens-rising-sun-form__input {
   text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
+  font-size: 14px;
+  padding: 12px;
   border: 1px solid #f0f1f3;
 }
 
 .c-betterhomesandgardens-rising-sun-form__submit {
   background-color: #f7eaf1;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #5198d1;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
 }
 
 .c-betterhomesandgardens-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -1358,19 +1280,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-betterhomesandgardens-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -1384,12 +1293,12 @@ form {
 .c-betterhomesandgardens-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-betterhomesandgardens-successful-rising-sun__overlay {
@@ -1408,28 +1317,28 @@ form {
 
 .c-betterhomesandgardens-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #5198d1;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-betterhomesandgardens-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-betterhomesandgardens-successful-rising-sun__submit {
   background-color: #5198d1;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -1440,16 +1349,16 @@ form {
 }
 
 .c-beautycrew-close-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 13px;
+  height: 12px;
 }
 
 .c-beautycrew-close-icon:before,
 .c-beautycrew-close-icon:after {
   position: absolute;
   content: " ";
-  height: 1.4rem;
-  width: 4px;
+  height: 12px;
+  width: 2px;
   background-color: #e46460;
 }
 
@@ -1471,8 +1380,8 @@ form {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  right: 16px;
+  top: 16px;
 }
 
 .c-beautycrew-rising-sun-form {
@@ -1501,49 +1410,49 @@ form {
 .c-beautycrew-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-beautycrew-rising-sun-form__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #333333;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-beautycrew-rising-sun-form__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .c-beautycrew-rising-sun-form__input {
   text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
+  font-size: 14px;
+  padding: 12px;
   border: 1px solid #f0f1f3;
 }
 
 .c-beautycrew-rising-sun-form__submit {
   background-color: #e46460;
   border: none;
-  border-radius: 3px;
-  color: #333333;
-  font-size: 0.875rem;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
 }
 
 .c-beautycrew-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -1563,19 +1472,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-beautycrew-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -1589,12 +1485,12 @@ form {
 .c-beautycrew-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-beautycrew-successful-rising-sun__overlay {
@@ -1613,28 +1509,28 @@ form {
 
 .c-beautycrew-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #e46460;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-beautycrew-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-beautycrew-successful-rising-sun__submit {
   background-color: #e46460;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -1645,16 +1541,16 @@ form {
 }
 
 .c-marieclaire-close-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 13px;
+  height: 12px;
 }
 
 .c-marieclaire-close-icon:before,
 .c-marieclaire-close-icon:after {
   position: absolute;
   content: " ";
-  height: 1.4rem;
-  width: 4px;
+  height: 12px;
+  width: 2px;
   background-color: #262626;
 }
 
@@ -1676,8 +1572,8 @@ form {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  right: 16px;
+  top: 16px;
 }
 
 .c-marieclaire-rising-sun-form {
@@ -1706,49 +1602,49 @@ form {
 .c-marieclaire-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-marieclaire-rising-sun-form__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #262626;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-marieclaire-rising-sun-form__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .c-marieclaire-rising-sun-form__input {
   text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
+  font-size: 14px;
+  padding: 12px;
   border: 1px solid #f0f1f3;
 }
 
 .c-marieclaire-rising-sun-form__submit {
   background-color: #262626;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
 }
 
 .c-marieclaire-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -1768,19 +1664,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-marieclaire-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -1794,12 +1677,12 @@ form {
 .c-marieclaire-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-marieclaire-successful-rising-sun__overlay {
@@ -1818,28 +1701,28 @@ form {
 
 .c-marieclaire-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #262626;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-marieclaire-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-marieclaire-successful-rising-sun__submit {
   background-color: #262626;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -1973,19 +1856,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-nowtolove-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -2055,16 +1925,16 @@ form {
 }
 
 .c-newidea-close-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 13px;
+  height: 12px;
 }
 
 .c-newidea-close-icon:before,
 .c-newidea-close-icon:after {
   position: absolute;
   content: " ";
-  height: 1.4rem;
-  width: 4px;
+  height: 12px;
+  width: 2px;
   background-color: #fa29d8;
 }
 
@@ -2086,8 +1956,8 @@ form {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  right: 1rem;
-  top: 1rem;
+  right: 16px;
+  top: 16px;
 }
 
 .c-newidea-rising-sun-form {
@@ -2116,49 +1986,49 @@ form {
 .c-newidea-rising-sun-form__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-newidea-rising-sun-form__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #fa29d8;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-newidea-rising-sun-form__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .c-newidea-rising-sun-form__input {
   text-align: center;
-  font-size: 0.875rem;
-  padding: 0.8rem;
+  font-size: 14px;
+  padding: 12px;
   border: 1px solid #f0f1f3;
 }
 
 .c-newidea-rising-sun-form__submit {
   background-color: #fa29d8;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
 }
 
 .c-newidea-rising-sun-form__copy {
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 
 @media (max-width: 50em) {
@@ -2178,19 +2048,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-newidea-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -2204,12 +2061,12 @@ form {
 .c-newidea-successful-rising-sun-pop-up__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   text-align: center;
   justify-content: center;
   max-width: 50%;
   margin: 0 auto;
-  padding: 3.125rem;
+  padding: 50px;
 }
 
 .c-newidea-successful-rising-sun__overlay {
@@ -2228,28 +2085,28 @@ form {
 
 .c-newidea-successful-rising-sun__heading {
   margin: 0;
-  margin-bottom: 2.563rem;
+  margin-bottom: 40px;
   color: #fa29d8;
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .c-newidea-successful-rising-sun__sub-heading {
   margin: 0;
-  margin-bottom: 1.875rem;
-  font-size: 1rem;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 
 button.c-newidea-successful-rising-sun__submit {
   background-color: #fa29d8;
   border: none;
-  border-radius: 3px;
+  border-radius: 6px;
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 14px;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 0.8rem;
-  margin-bottom: 1.875rem;
+  padding: 12px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -2383,19 +2240,6 @@ form {
   }
 }
 
-.h-hide-visually {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .c-gourmettraveller-successful-rising-sun-pop-up {
   font-family: "Roboto", sans-serif;
   position: fixed;
@@ -2456,4 +2300,205 @@ button.c-gourmettraveller-successful-rising-sun__submit {
   padding: 0.8rem;
   margin-bottom: 1.875rem;
   text-align: center;
+}
+
+/* -------------AWW FOOD */
+
+.c-awwfood-close-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.c-awwfood-close-icon:before,
+.c-awwfood-close-icon:after {
+  position: absolute;
+  content: " ";
+  height: 1.4rem;
+  width: 4px;
+  background-color: #000000;
+}
+
+.c-awwfood-close-icon:before {
+  transform: rotate(45deg);
+}
+
+.c-awwfood-close-icon:after {
+  transform: rotate(-45deg);
+}
+
+.c-awwfood-close-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  right: 1rem;
+  top: 1rem;
+}
+
+.c-awwfood-rising-sun-form {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  left: 10%;
+  right: 10%;
+  z-index: 99999999;
+}
+
+.c-awwfood-rising-sun-form__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  border: none;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity var(--g-transition-time) ease;
+  z-index: 9999999;
+  -webkit-overflow-scrolling: touch;
+}
+
+.c-awwfood-rising-sun-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 3.125rem;
+}
+
+.c-awwfood-rising-sun-form__heading {
+  margin: 0;
+  margin-bottom: 2.563rem;
+  color: #000000;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.c-awwfood-rising-sun-form__sub-heading {
+  margin: 0;
+  margin-bottom: 1.875rem;
+  font-size: 1rem;
+}
+
+.c-awwfood-rising-sun-form__input {
+  text-align: center;
+  font-size: 0.875rem;
+  padding: 0.8rem;
+  border: 1px solid #f0f1f3;
+}
+
+.c-awwfood-rising-sun-form__submit {
+  background-color: #c7ad8c;
+  border: none;
+  border-radius: 3px;
+  color: #ffff;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.8rem;
+  margin-bottom: 1.875rem;
+}
+
+.c-awwfood-rising-sun-form__copy {
+  font-size: 0.625rem;
+}
+
+@media (max-width: 50em) {
+  .c-awwfood-rising-sun-form {
+    left: 0;
+    right: 0;
+  }
+}
+
+@media (max-width: 40em) {
+  .c-awwfood-rising-sun-form__wrapper {
+    max-width: 100%;
+  }
+
+  .c-awwfood-successful-rising-sun-pop-up__wrapper {
+    max-width: 100%;
+  }
+}
+
+.c-awwfood-successful-rising-sun-pop-up {
+  font-family: "Roboto", sans-serif;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  left: 10%;
+  right: 10%;
+  z-index: 99999999;
+}
+
+.c-awwfood-successful-rising-sun-pop-up__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 3.125rem;
+}
+
+.c-awwfood-successful-rising-sun__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  border: none;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity var(--g-transition-time) ease;
+  z-index: 9999999;
+  -webkit-overflow-scrolling: touch;
+}
+
+.c-awwfood-successful-rising-sun__heading {
+  margin: 0;
+  margin-bottom: 2.563rem;
+  color: #000000;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.c-awwfood-successful-rising-sun__sub-heading {
+  margin: 0;
+  margin-bottom: 1.875rem;
+  font-size: 1rem;
+}
+
+button.c-awwfood-successful-rising-sun__submit {
+  background-color: #c7ad8c;
+  border: none;
+  border-radius: 3px;
+  color: #ffff;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.8rem;
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+
+.h-hide-visually {
+  border: 0;
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
