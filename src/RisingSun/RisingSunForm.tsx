@@ -25,7 +25,6 @@ const RisingSun = () => {
     secondarySuccessMessage,
     secondaryText,
     successfulCtaText,
-    termsAndConditions,
     theme,
   } = getRisingSunTheme(String(themeParam) as RisingSunThemeType);
 
@@ -175,7 +174,14 @@ const RisingSun = () => {
                 {ctaText}
               </button>
               <p className={`c-${theme}-rising-sun-form__copy`}>
-                {termsAndConditions}
+                By signing up, you agree to receive marketing communication and
+                to our our{" "}
+                <a href="https://www.aremedia.com.au/terms/">Terms of Use</a>{" "}
+                and{" "}
+                <a href="https://www.aremedia.com.au/privacy/">
+                  Privacy Policy
+                </a>
+                .
               </p>
             </>
           )}

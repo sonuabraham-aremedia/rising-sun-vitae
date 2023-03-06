@@ -12,7 +12,7 @@ const PRIMARY_TEXT_MAP = Object.freeze({
   marie_claire: "Want 15% off at Adore Beauty?",
   new_idea: "Want 20% off at The Iconic?",
   now_to_love: "Want 20% off at The Iconic?",
-  who: "Want 20% off at The Iconic?",
+  who: "Want 15% off at Adore Beauty?",
 });
 
 const SECONDARY_TEXT_MAP = Object.freeze({
@@ -106,7 +106,7 @@ const SECONDARY_SUCCESS_MESSAGE_MAP = Object.freeze({
     "Get 20% off The Iconic using the discount code send to your email.",
   now_to_love:
     "Get 20% off The Iconic using the discount code send to your email.",
-  who: "Get 20% off The Iconic using the discount code send to your email.",
+  who: "Get 15% off Adore Beauty using the discount code send to your email.",
 });
 
 const CTA_TEXT_MAP = Object.freeze({
@@ -123,27 +123,7 @@ const CTA_TEXT_MAP = Object.freeze({
   marie_claire: "Sign up and get 15% off",
   new_idea: "Sign up and get 20% off",
   now_to_love: "Sign up and get 20% off",
-  who: "Sign up and get 20% off",
-});
-
-const termsAndConditions =
-  "By signing up, you agree to receive marketing communication and to our our Terms of Use and Privacy Policy.";
-
-const TERMS_AND_CONDITIONS_MAP = Object.freeze({
-  aww: "aww",
-  aww_food: termsAndConditions,
-  beauty_crew: termsAndConditions,
-  beauty_heaven: termsAndConditions,
-  better_homes: termsAndConditions,
-  bounty: "By joining, you agree to our Privacy Policy & Terms of Use",
-  elle: termsAndConditions,
-  gourmet_traveller: termsAndConditions,
-  home_beautiful: termsAndConditions,
-  homes_to_love: termsAndConditions,
-  marie_claire: termsAndConditions,
-  new_idea: termsAndConditions,
-  now_to_love: termsAndConditions,
-  who: termsAndConditions,
+  who: "Sign up and get 15% off",
 });
 
 const THEME_MAP = Object.freeze({
@@ -207,7 +187,6 @@ export {
   SECONDARY_TEXT_MAP,
   PRIMARY_SUCCESS_MESSAGE_MAP,
   SECONDARY_SUCCESS_MESSAGE_MAP,
-  TERMS_AND_CONDITIONS_MAP,
   THEME_MAP,
   SAILTHRU_CUSTOMER_ID_MAP,
   SAILTHRU_LIST_NAME_MAP,
