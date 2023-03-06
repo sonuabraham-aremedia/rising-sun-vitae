@@ -1,9 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  SyntheticEvent,
-  InputHTMLAttributes,
-} from "react";
+import React, { useState, useEffect, SyntheticEvent, ChangeEvent } from "react";
 import "./RisingSunForm.css";
 import {
   ISailthruClient,
@@ -21,6 +16,7 @@ import { RisingSunThemeType } from "./RisingSunForm.types";
 const RisingSun = () => {
   const scriptElementByClass = document.querySelector("#js-rising-sun-script");
   const queryString = scriptElementByClass?.getAttribute("src") as string;
+
   const { theme: themeParam } = extractParams({ queryString });
   const {
     ctaText,
@@ -41,9 +37,7 @@ const RisingSun = () => {
   const [sailthruClient, setSailthruClient] =
     useState<ISailthruClient["Sailthru"]>();
 
-  const handleUpdateEmailValue = (
-    event: InputHTMLAttributes<HTMLInputElement["formTarget"]>
-  ) => {
+  const handleUpdateEmailValue = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
     setEmailValue(value);
@@ -131,7 +125,6 @@ const RisingSun = () => {
         className={`c-${theme}-rising-sun-form`}
         method="post"
         role="dialog"
-        target="dummy-iframe"
       >
         <button
           className={`c-${theme}-close-button`}
