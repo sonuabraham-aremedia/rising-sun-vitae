@@ -1,25 +1,22 @@
-const fifteenOffAdore = "Want 15% off at Adore Beauty?";
-const twentyOffIconic = "Want 20% off at The Iconic?";
-
 const PRIMARY_TEXT_MAP = Object.freeze({
-  aww: "",
-  aww_food: fifteenOffAdore,
-  beauty_crew: fifteenOffAdore,
-  beauty_heaven: fifteenOffAdore,
-  better_homes: twentyOffIconic,
+  aww: "aww",
+  aww_food: "Want 15% off at Adore Beauty?",
+  beauty_crew: "Want 15% off at Adore Beauty?",
+  beauty_heaven: "Want 15% off at Adore Beauty?",
+  better_homes: "Want 20% off at The Iconic?",
   bounty: "Want 10% off your first order?",
-  elle: fifteenOffAdore,
-  gourmet_traveller: twentyOffIconic,
-  home_beautiful: twentyOffIconic,
-  homes_to_love: twentyOffIconic,
-  marie_claire: fifteenOffAdore,
-  new_idea: twentyOffIconic,
-  now_to_love: twentyOffIconic,
-  who: twentyOffIconic,
+  elle: "Want 15% off at Adore Beauty?",
+  gourmet_traveller: "Want 20% off at The Iconic?",
+  home_beautiful: "Want 20% off at The Iconic?",
+  homes_to_love: "Want 20% off at The Iconic?",
+  marie_claire: "Want 15% off at Adore Beauty?",
+  new_idea: "Want 20% off at The Iconic?",
+  now_to_love: "Want 20% off at The Iconic?",
+  who: "Want 20% off at The Iconic?",
 });
 
 const SECONDARY_TEXT_MAP = Object.freeze({
-  aww: "",
+  aww: "aww",
   aww_food:
     "Subscribe for the best of Women's Weekly Food, delivered straight to your inbox.",
   beauty_crew:
@@ -47,7 +44,7 @@ const SECONDARY_TEXT_MAP = Object.freeze({
 });
 
 const SUCCESSFUL_CTA_TEXT_MAP = Object.freeze({
-  aww: "",
+  aww: "aww",
   aww_food: "Shop now",
   beauty_crew: "Shop now",
   beauty_heaven: "Shop now",
@@ -64,7 +61,7 @@ const SUCCESSFUL_CTA_TEXT_MAP = Object.freeze({
 });
 
 const PRIMARY_SUCCESS_MESSAGE_MAP = Object.freeze({
-  aww: "",
+  aww: "aww",
   aww_food:
     "You've successfully subscribed to the Women's Weekly Food newsletter!",
   beauty_crew: "You've successfully subscribed to the Beauty Crew newsletter!",
@@ -84,52 +81,56 @@ const PRIMARY_SUCCESS_MESSAGE_MAP = Object.freeze({
   who: "You've successfully subscribed to the Who newsletter!",
 });
 
-const adoreSuccessMessage = "Want 15% off at Adore Beauty?";
-const iconicSuccessMessage = "Want 20% off at The Iconic?";
-
 const SECONDARY_SUCCESS_MESSAGE_MAP = Object.freeze({
-  aww: "",
-  aww_food: iconicSuccessMessage,
-  beauty_crew: adoreSuccessMessage,
-  beauty_heaven: adoreSuccessMessage,
-  better_homes: iconicSuccessMessage,
+  aww: "aww",
+  aww_food:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  beauty_crew:
+    "Get 15% off Adore Beauty using the discount code send to your email.",
+  beauty_heaven:
+    "Get 15% off Adore Beauty using the discount code send to your email.",
+  better_homes:
+    "Get 20% off The Iconic using the discount code send to your email.",
   bounty:
-    "Check your email to get your $25 dollar voucher code, enter your code when you checkout at The Iconic.",
-  elle: adoreSuccessMessage,
-  gourmet_traveller: iconicSuccessMessage,
-  home_beautiful: iconicSuccessMessage,
-  homes_to_love: iconicSuccessMessage,
-  marie_claire: adoreSuccessMessage,
-  new_idea: iconicSuccessMessage,
-  now_to_love: iconicSuccessMessage,
-  who: iconicSuccessMessage,
+    "Get 10% off your first order by using the discount code sent to your email at checkout.",
+  elle: "Get 15% off Adore Beauty using the discount code send to your email.",
+  gourmet_traveller:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  home_beautiful:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  homes_to_love:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  marie_claire:
+    "Get 15% off Adore Beauty using the discount code send to your email.",
+  new_idea:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  now_to_love:
+    "Get 20% off The Iconic using the discount code send to your email.",
+  who: "Get 20% off The Iconic using the discount code send to your email.",
 });
 
-const iconicCtaSuccessMessage = "Sign up and get 20% off";
-const adoreCtaSuccessMessage = "Sign up and get 15% off";
-
 const CTA_TEXT_MAP = Object.freeze({
-  aww: "",
-  aww_food: iconicCtaSuccessMessage,
-  beauty_crew: adoreCtaSuccessMessage,
-  beauty_heaven: adoreCtaSuccessMessage,
-  better_homes: iconicCtaSuccessMessage,
+  aww: "aww",
+  aww_food: "Sign up and get 20% off",
+  beauty_crew: "Sign up and get 15% off",
+  beauty_heaven: "Sign up and get 15% off",
+  better_homes: "Sign up and get 20% off",
   bounty: "Get 10% off Now",
-  elle: adoreCtaSuccessMessage,
-  gourmet_traveller: iconicCtaSuccessMessage,
-  home_beautiful: iconicCtaSuccessMessage,
-  homes_to_love: iconicCtaSuccessMessage,
-  marie_claire: adoreCtaSuccessMessage,
-  new_idea: iconicCtaSuccessMessage,
-  now_to_love: iconicCtaSuccessMessage,
-  who: iconicCtaSuccessMessage,
+  elle: "Sign up and get 15% off",
+  gourmet_traveller: "Sign up and get 20% off",
+  home_beautiful: "Sign up and get 20% off",
+  homes_to_love: "Sign up and get 20% off",
+  marie_claire: "Sign up and get 15% off",
+  new_idea: "Sign up and get 20% off",
+  now_to_love: "Sign up and get 20% off",
+  who: "Sign up and get 20% off",
 });
 
 const termsAndConditions =
   "By signing up, you agree to receive marketing communication and to our our Terms of Use and Privacy Policy.";
 
 const TERMS_AND_CONDITIONS_MAP = Object.freeze({
-  aww: "",
+  aww: "aww",
   aww_food: termsAndConditions,
   beauty_crew: termsAndConditions,
   beauty_heaven: termsAndConditions,
