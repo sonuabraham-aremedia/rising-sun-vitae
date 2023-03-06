@@ -5,7 +5,6 @@ import {
   SECONDARY_SUCCESS_MESSAGE_MAP,
   SECONDARY_TEXT_MAP,
   SUCCESSFUL_CTA_TEXT_MAP,
-  TERMS_AND_CONDITIONS_MAP,
   THEME_MAP,
 } from "./RisingSunForm.constants";
 import { IExtractParams } from "./RisingSunForm.interfaces";
@@ -19,7 +18,6 @@ const getRisingSunTheme = (theme: RisingSunThemeType = "bounty") => {
     secondaryText: SECONDARY_TEXT_MAP[theme],
     primarySuccessMessage: PRIMARY_SUCCESS_MESSAGE_MAP[theme],
     secondarySuccessMessage: SECONDARY_SUCCESS_MESSAGE_MAP[theme],
-    termsAndConditions: TERMS_AND_CONDITIONS_MAP[theme],
     theme: THEME_MAP[theme],
   };
 };
