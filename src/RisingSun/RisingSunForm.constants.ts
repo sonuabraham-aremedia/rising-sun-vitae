@@ -68,7 +68,7 @@ const PRIMARY_SUCCESS_MESSAGE_MAP = Object.freeze({
   beauty_heaven:
     "You've successfully subscribed to the Beauty Heaven newsletter!",
   better_homes: "Welcome! We're so excited to have you.",
-  bounty: "Welcome, we’re so excited to have you!",
+  bounty: "Welcome, we're so excited to have you!",
   elle: "You've successfully subscribed to the Elle newsletter!",
   gourmet_traveller:
     "You've successfully subscribed to the Gourmet Traveller newsletter!",
