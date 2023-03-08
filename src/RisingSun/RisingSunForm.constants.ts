@@ -1,6 +1,6 @@
 const PRIMARY_TEXT_MAP = Object.freeze({
   aww: "aww",
-  aww_food: "Want 15% off at Adore Beauty?",
+  aww_food: "Want 20% off at The Iconic?",
   beauty_crew: "Want 15% off at Adore Beauty?",
   beauty_heaven: "Want 15% off at Adore Beauty?",
   better_homes: "Want 20% off at The Iconic?",

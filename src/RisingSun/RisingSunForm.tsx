@@ -67,7 +67,8 @@ const RisingSun = () => {
   };
 
   const handleCloseRisingSun = () => {
-    localStorage.setItem("hasSeenPopup", TRUE);
+    localStorage.setItem(`hasSeen${theme}Popup`, TRUE);
+    console.log({ localStorage });
 
     setIsOpen(!isOpen);
 
@@ -89,7 +90,9 @@ const RisingSun = () => {
 
   useEffect(() => {
     const { Sailthru }: ISailthruClient = window as IWindowWithSailthru;
-    const isHasSeenPopupInLocalStorage = localStorage.getItem("hasSeenPopup");
+    const isHasSeenPopupInLocalStorage = localStorage.getItem(
+      `hasSeen${theme}Popup`
+    );
 
     setSailthruClient(Sailthru);
 

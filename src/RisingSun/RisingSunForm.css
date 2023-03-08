@@ -1060,11 +1060,13 @@ form {
   font-size: 16px;
 }
 
-.c-beautyheaven-rising-sun-form__input {
+input.c-beautyheaven-rising-sun-form__input {
   text-align: center;
   font-size: 14px;
   padding: 12px;
   border: 1px solid #f0f1f3;
+  background-color: #ffffff;
+  color: #747474;
 }
 
 .c-beautyheaven-rising-sun-form__submit {
@@ -1081,6 +1083,12 @@ form {
 
 .c-beautyheaven-rising-sun-form__copy {
   font-size: 0.625rem;
+}
+
+.c-beautyheaven-rising-sun-form__tandc {
+  font-size: 10px;
+  text-decoration: underline;
+  color: #000000;
 }
 
 @media (max-width: 50em) {
