@@ -8,6 +8,7 @@ import {
 import {
   SAILTHRU_CUSTOMER_ID_MAP,
   SAILTHRU_LIST_NAME_MAP,
+  AFFILIATE_LINKS_MAP,
   TRUE,
 } from "./RisingSunForm.constants";
 import { extractParams, getRisingSunTheme } from "./RisingSunForm.helpers";
@@ -68,7 +69,6 @@ const RisingSun = () => {
 
   const handleCloseRisingSun = () => {
     localStorage.setItem(`hasSeen${theme}Popup`, TRUE);
-    console.log({ localStorage });
 
     setIsOpen(!isOpen);
 
@@ -86,6 +86,7 @@ const RisingSun = () => {
 
   const handleOnCloseRisingSunSuccess = () => {
     handleCloseRisingSun();
+    window.location.href = AFFILIATE_LINKS_MAP[themeParam];
   };
 
   useEffect(() => {
@@ -177,22 +178,15 @@ const RisingSun = () => {
                 {ctaText}
               </button>
               <p className={`c-${theme}-rising-sun-form__copy`}>
-                By signing up, you agree to receive marketing communication and
-                to our our{" "}
-                <a
-                  className={`c-${theme}-rising-sun-form__tandc`}
-                  href="https://www.aremedia.com.au/terms/"
-                >
-                  Terms of Use
-                </a>{" "}
-                and{" "}
+                By signing up, you agree to receive marketing communications in
+                accordance with our{" "}
                 <a
                   className={`c-${theme}-rising-sun-form__tandc`}
                   href="https://www.aremedia.com.au/privacy/"
                 >
                   Privacy Policy
                 </a>
-                .
+                . You may unsubscribe at any time.
               </p>
             </>
           )}

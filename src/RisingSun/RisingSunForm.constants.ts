@@ -1,46 +1,31 @@
-const PRIMARY_TEXT_MAP = Object.freeze({
-  aww: "aww",
-  aww_food: "Want 20% off at The Iconic?",
-  beauty_crew: "Want 15% off at Adore Beauty?",
-  beauty_heaven: "Want 15% off at Adore Beauty?",
-  better_homes: "Want 20% off at The Iconic?",
-  bounty: "Want 10% off your first order?",
-  elle: "Want 15% off at Adore Beauty?",
-  gourmet_traveller: "Want 20% off at The Iconic?",
-  home_beautiful: "Want 20% off at The Iconic?",
-  homes_to_love: "Want 20% off at The Iconic?",
-  marie_claire: "Want 15% off at Adore Beauty?",
-  new_idea: "Want 20% off at The Iconic?",
-  now_to_love: "Want 20% off at The Iconic?",
-  who: "Want 15% off at Adore Beauty?",
-});
+const PRIMARY_TEXT = "GET THE NEWSLETTER";
 
 const SECONDARY_TEXT_MAP = Object.freeze({
   aww: "aww",
   aww_food:
-    "Subscribe for the best of Women's Weekly Food, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Australian Women's Weekly Food, and get 20% off The Iconic.",
   beauty_crew:
-    "Subscribe for the best of Beauty Crew delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Beauty Crew, and get 15% off at Adore Beauty.",
   beauty_heaven:
-    "Subscribe for the best of Beauty Heaven (plus product sampling opportunities).",
+    "Sign up below for the best news, updates and special offers from Beauty Heaven, and get 15% off at Adore Beauty.",
   better_homes:
-    "Subscribe for the best of Better Homes and Gardens delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Better Homes and Gardens, and get 20% off The Iconic.",
   bounty:
-    "Sign up to receive the latest discounts, as well as parenting and lifestyle tips.",
-  elle: "Subscribe for the best of Elle Australia, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Bounty Parents, and get 20% off The Iconic.",
+  elle: "Sign up below for the best news, updates and special offers from Elle, and get 15% off at Adore Beauty.",
   gourmet_traveller:
-    "Subscribe for the best of Gourmet Traveller, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Gourmet Traveller, and get 20% off The Iconic.",
   home_beautiful:
-    "Subscribe for the best of Home Beautiful delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Home Beautiful, and get 20% off The Iconic.",
   homes_to_love:
-    "Subscribe for the best of Homes To Love delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Homes to Love, and get 20% off The Iconic.",
   marie_claire:
-    "Subscribe for the best of Marie Claire Australia, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Marie Claire, and get 15% off at Adore Beauty.",
   new_idea:
-    "Subscribe for the best of New Idea, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from New Idea, and get 20% off The Iconic.",
   now_to_love:
-    "Subscribe for the best of Now To Love, delivered straight to your inbox.",
-  who: "Subscribe for the best of Who Mag, delivered straight to your inbox.",
+    "Sign up below for the best news, updates and special offers from Now to Love, and get 20% off The Iconic.",
+  who: "Sign up below for the best news, updates and special offers from Who, and get 20% off The Iconic.",
 });
 
 const SUCCESSFUL_CTA_TEXT_MAP = Object.freeze({
@@ -177,17 +162,46 @@ const SAILTHRU_LIST_NAME_MAP = Object.freeze({
   who: "rs-who-welcome",
 });
 
+const AFFILIATE_LINKS_MAP = Object.freeze({
+  aww: "rs-aww-welcome",
+  aww_food:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:wwf-edm-AWWFoodWelcomeseries/destination:https://www.theiconic.com.au/",
+  beauty_crew:
+    "https://prf.hn/click/camref:1101lozze/pubref:bc-edm-BeautyCrewWelcomeSeries/destination:https://www.adorebeauty.com.au/",
+  beauty_heaven:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:bh-edm-BeautyHeavenWelcomeseries/destination:https://www.theiconic.com.au/",
+  better_homes:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:bhg-edm-BHGWelcomeseries/destination:https://www.theiconic.com.au/",
+  bounty:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:bp-edm-BountyWelcomeseries/destination:https://www.theiconic.com.au/",
+  elle: "https://prf.hn/click/camref:1101lozze/pubref:el-edm-ElleWelcomeseries/destination:https://www.adorebeauty.com.au/",
+  gourmet_traveller:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:gt-edm-GourmetTravellerWelcomeseries/destination:https://www.theiconic.com.au/",
+  home_beautiful:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:hbe-edm-HBWelcomeseries/destination:https://www.theiconic.com.au/",
+  homes_to_love:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:htl-edm-HTLWelcomeseries/destination:https://www.theiconic.com.au/",
+  marie_claire:
+    "https://prf.hn/click/camref:1101lozze/pubref:mc-edm-MarieClaireWelcomeSeries/destination:https://www.adorebeauty.com.au/",
+  new_idea:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:ni-edm-NewIdeaWelcomeseries/destination:https://www.theiconic.com.au/",
+  now_to_love:
+    "https://prf.hn/click/camref:1101liQ3t/pubref:ntl-edm-NTLWelcomeSeries/destination:https://www.theiconic.com.au/",
+  who: "https://prf.hn/click/camref:1101lozze/pubref:who-edm-WhoWelcomeSeries/destination:https://www.adorebeauty.com.au/",
+});
+
 const TRUE = "TRUE";
 
 export {
   TRUE,
   CTA_TEXT_MAP,
   SUCCESSFUL_CTA_TEXT_MAP,
-  PRIMARY_TEXT_MAP,
+  PRIMARY_TEXT,
   SECONDARY_TEXT_MAP,
   PRIMARY_SUCCESS_MESSAGE_MAP,
   SECONDARY_SUCCESS_MESSAGE_MAP,
   THEME_MAP,
+  AFFILIATE_LINKS_MAP,
   SAILTHRU_CUSTOMER_ID_MAP,
   SAILTHRU_LIST_NAME_MAP,
 };
