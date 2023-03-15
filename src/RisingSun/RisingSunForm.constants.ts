@@ -25,7 +25,7 @@ const SECONDARY_TEXT_MAP = Object.freeze({
     "Sign up below for the best news, updates and special offers from New Idea, and get 20% off The Iconic.",
   now_to_love:
     "Sign up below for the best news, updates and special offers from Now to Love, and get 20% off The Iconic.",
-  who: "Sign up below for the best news, updates and special offers from Who, and get 20% off The Iconic.",
+  who: "Sign up below for the best news, updates and special offers from Who, and get 15% off at Adore Beauty",
 });
 
 const SUCCESSFUL_CTA_TEXT_MAP = Object.freeze({
