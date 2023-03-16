@@ -86,7 +86,11 @@ const RisingSun = () => {
 
   const handleOnCloseRisingSunSuccess = () => {
     handleCloseRisingSun();
+  };
+
+  const handleSuccessfulSignupRedirect = () => {
     window.location.href = AFFILIATE_LINKS_MAP[themeParam];
+    handleCloseRisingSun();
   };
 
   useEffect(() => {
@@ -150,7 +154,7 @@ const RisingSun = () => {
             <button
               className={`c-${theme}-successful-rising-sun__submit`}
               type="button"
-              onClick={handleOnCloseRisingSunSuccess}
+              onClick={handleSuccessfulSignupRedirect}
             >
               {successfulCtaText}
             </button>
