@@ -7,7 +7,7 @@ const SECONDARY_TEXT_MAP = Object.freeze({
   beauty_crew:
     "Sign up below for the best news, updates and special offers from Beauty Crew, and get 15% off at Adore Beauty.",
   beauty_heaven:
-    "Sign up below for the best news, updates and special offers from Beauty Heaven, and get 15% off at Adore Beauty.",
+    "Sign up below for the best news, updates and special offers from Beauty Heaven, and get 20% off The Iconic.",
   better_homes:
     "Sign up below for the best news, updates and special offers from Better Homes and Gardens, and get 20% off The Iconic.",
   bounty:
@@ -73,7 +73,7 @@ const SECONDARY_SUCCESS_MESSAGE_MAP = Object.freeze({
   beauty_crew:
     "Get 15% off Adore Beauty using the discount code send to your email.",
   beauty_heaven:
-    "Get 15% off Adore Beauty using the discount code send to your email.",
+    "Get 20% off The Iconic using the discount code send to your email.",
   better_homes:
     "Get 20% off The Iconic using the discount code send to your email.",
   bounty:
@@ -98,7 +98,7 @@ const CTA_TEXT_MAP = Object.freeze({
   aww: "aww",
   aww_food: "Sign up and get 20% off",
   beauty_crew: "Sign up and get 15% off",
-  beauty_heaven: "Sign up and get 15% off",
+  beauty_heaven: "Sign up and get 20% off",
   better_homes: "Sign up and get 20% off",
   bounty: "Get 10% off Now",
   elle: "Sign up and get 15% off",

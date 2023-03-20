@@ -197,7 +197,7 @@ const RisingSun = () => {
         </div>
       </form>
       <button
-        className={`c-${theme}-successful-rising-sun__overlay`}
+        className={`c-rising-sun__overlay`}
         type="button"
         onClick={handleOnCloseRisingSunSuccess}
       />

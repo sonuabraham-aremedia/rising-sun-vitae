@@ -2,6 +2,20 @@ form {
   font-family: "Roboto", sans-serif;
 }
 
+.c-rising-sun__overlay {
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  bottom: -50px;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: -50px;
+  transition: opacity var(--g-transition-time) ease;
+  z-index: 9999999;
+}
+
 /* -------------BOUNTY MAG */
 
 .c-bounty-close-icon {
@@ -47,20 +61,6 @@ form {
   position: fixed;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-bounty-rising-sun-form__overlay {
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: none;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
 }
 
 .c-bounty-rising-sun-form__wrapper {
@@ -155,20 +155,6 @@ form {
   text-align: center;
 }
 
-.c-bounty-successful-rising-sun__overlay {
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: none;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-}
-
 .c-bounty-successful-rising-sun__heading {
   color: #ff5000;
   font-size: 1.875rem;
@@ -245,20 +231,6 @@ form {
   position: fixed;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-who-rising-sun-form__overlay {
-  -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: none;
-  bottom: 0;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
 }
 
 .c-who-rising-sun-form__wrapper {
@@ -353,20 +325,6 @@ form {
   padding: 10px;
 }
 
-.c-who-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-who-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 10px;
@@ -443,20 +401,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-elle-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-elle-rising-sun-form__wrapper {
@@ -545,20 +489,6 @@ form {
   padding: 3.125rem;
 }
 
-.c-elle-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-elle-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 2.563rem;
@@ -635,20 +565,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-homestolove-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-homestolove-rising-sun-form__wrapper {
@@ -737,20 +653,6 @@ form {
   padding: 3.125rem;
 }
 
-.c-homestolove-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-homestolove-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 2.563rem;
@@ -827,20 +729,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-homebeautiful-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-homebeautiful-rising-sun-form__wrapper {
@@ -929,20 +817,6 @@ form {
   padding: 50px;
 }
 
-.c-homebeautiful-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-homebeautiful-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 40px;
@@ -1019,20 +893,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-beautyheaven-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-beautyheaven-rising-sun-form__wrapper {
@@ -1129,20 +989,6 @@ input.c-beautyheaven-rising-sun-form__input {
   padding: 3.125rem;
 }
 
-.c-beautyheaven-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-beautyheaven-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 2.563rem;
@@ -1219,20 +1065,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-betterhomesandgardens-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-betterhomesandgardens-rising-sun-form__wrapper {
@@ -1321,20 +1153,6 @@ form {
   padding: 50px;
 }
 
-.c-betterhomesandgardens-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-betterhomesandgardens-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 40px;
@@ -1411,20 +1229,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-beautycrew-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-beautycrew-rising-sun-form__wrapper {
@@ -1513,20 +1317,6 @@ form {
   padding: 50px;
 }
 
-.c-beautycrew-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-beautycrew-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 40px;
@@ -1603,20 +1393,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-marieclaire-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-marieclaire-rising-sun-form__wrapper {
@@ -1711,20 +1487,6 @@ form {
   padding: 50px;
 }
 
-.c-marieclaire-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-marieclaire-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 40px;
@@ -1801,20 +1563,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-nowtolove-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-nowtolove-rising-sun-form__wrapper {
@@ -1909,20 +1657,6 @@ form {
   padding: 3.125rem;
 }
 
-.c-nowtolove-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-nowtolove-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 2.563rem;
@@ -1999,20 +1733,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-newidea-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-newidea-rising-sun-form__wrapper {
@@ -2106,20 +1826,6 @@ form {
   padding: 20px;
 }
 
-.c-newidea-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-newidea-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 20px;
@@ -2195,20 +1901,6 @@ form {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-gourmettraveller-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-gourmettraveller-rising-sun-form__wrapper {
@@ -2302,20 +1994,6 @@ form {
   padding: 20px;
 }
 
-.c-gourmettraveller-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
-}
-
 .c-gourmettraveller-successful-rising-sun__heading {
   margin: 0;
   margin-bottom: 2.563rem;
@@ -2388,20 +2066,6 @@ button.c-gourmettraveller-successful-rising-sun__submit {
   left: 10%;
   right: 10%;
   z-index: 99999999;
-}
-
-.c-awwfood-rising-sun-form__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-awwfood-rising-sun-form__wrapper {
@@ -2493,20 +2157,6 @@ button.c-gourmettraveller-successful-rising-sun__submit {
   max-width: 50%;
   margin: 0 auto;
   padding: 20px;
-}
-
-.c-awwfood-successful-rising-sun__overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: 0;
-  border: none;
-  left: 0;
-  opacity: 1;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: opacity var(--g-transition-time) ease;
-  z-index: 9999999;
-  -webkit-overflow-scrolling: touch;
 }
 
 .c-awwfood-successful-rising-sun__heading {
