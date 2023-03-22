@@ -18,6 +18,8 @@ const RisingSun = () => {
   const scriptElementByClass = document.querySelector("#js-rising-sun-script");
   const queryString = scriptElementByClass?.getAttribute("src") as string;
 
+  console.log("running rising sun, test for build");
+
   const { theme: themeParam } = extractParams({ queryString });
   const {
     ctaText,
