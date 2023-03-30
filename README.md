@@ -1,4 +1,4 @@
-# rising-sun-vite
+# rising-sun-vite on main branch
 
 - node version needed:
 node version 16.16.0
