@@ -27,11 +27,23 @@ jobs:
           profile-name: am-cloud-admin-ops
       - run:
           name: Upload file to S3
-          command: aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-static-resources --delete        
+          command: |
+            if [[ $CIRCLE_BRANCH == "master" ]]; then
+              echo "Deploying to main s3 bucket!"
+              aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-static-resources --delete 
+            else
+              echo "Deploying to staging s3 bucket!"
+              aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-staging-static-resources --delete 
+            fi
+                 
 workflows:
   build_test:
     jobs:
-      - build_project
+      - build_project:
+          filters:
+            branches:
+              only:
+                - main
       - deploy_project:
           requires:
             - build_project
