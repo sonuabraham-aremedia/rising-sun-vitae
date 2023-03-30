@@ -1,4 +1,4 @@
-# rising-sun-vite
+# rising-sun-vite in staging branch
 
 - node version needed:
 node version 16.16.0
