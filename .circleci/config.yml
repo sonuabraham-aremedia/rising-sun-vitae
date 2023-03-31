@@ -28,6 +28,8 @@ jobs:
       - run:
           name: Upload file to S3
           command: |
+            mv ./dist/assets/index-*.css ./dist/assets/index-$CIRCLE_BRANCH.css
+            mv ./dist/assets/index-*.js ./dist/assets/index-$CIRCLE_BRANCH.js
             if [[ $CIRCLE_BRANCH == "main" ]]; then
               echo "Deploying to main s3 bucket!"
               aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-static-resources --delete 
