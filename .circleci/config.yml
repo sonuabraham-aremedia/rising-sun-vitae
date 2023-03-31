@@ -30,13 +30,13 @@ jobs:
           command: |
             if [[ $CIRCLE_BRANCH == "main" ]]; then
               echo "Deploying to main s3 bucket!"
-              cp ./dist/index_*.css ./dist/main.css
-              cp ./dist/index_*.jss ./dist/main.js
+              cp ./dist/assets/index_*.css ./dist/assets/main.css
+              cp ./dist/assets/index_*.jss ./dist/assets/main.js
               aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-static-resources --delete 
             else
               echo "Deploying to staging s3 bucket!"
-              cp ./dist/index_*.css ./dist/staging.css
-              cp ./dist/index_*.jss ./dist/stagin.js
+              cp ./dist/assets/index_*.css ./dist/assets/staging.css
+              cp ./dist/assets/index_*.jss ./dist/assets/stagin.js
               aws s3 sync ./dist s3://circleci-s3-cloudfront-integration-staging-static-resources --delete 
             fi
                  
