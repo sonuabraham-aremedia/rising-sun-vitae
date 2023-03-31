@@ -39,7 +39,7 @@ jobs:
             fi
                  
 workflows:
-  build_test:
+  build_deploy:
     jobs:
       - build_project:
           filters:
